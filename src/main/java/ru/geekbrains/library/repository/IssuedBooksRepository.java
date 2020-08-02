@@ -14,4 +14,8 @@ public interface IssuedBooksRepository extends JpaRepository<IssuedBooks,Long> {
     List<IssuedBooks> findAllByReader_Id(Long reader_id);
 
     List<IssuedBooks> findAllByBook_Author_Id(Long author_id);
+
+    void deleteAllByBook_IdAndReader_Id(Long book_id, Long reader_id);
+
+    IssuedBooks findFirstByBook_IdAndReader_Id(Long book_id, Long reader_id);
 }

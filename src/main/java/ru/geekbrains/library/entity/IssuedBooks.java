@@ -34,7 +34,7 @@ public class IssuedBooks {
         return reader;
     }
 
-    public void setReaders(Reader reader) {
+    public void setReader(Reader reader) {
         this.reader = reader;
     }
 
