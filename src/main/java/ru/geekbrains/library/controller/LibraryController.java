@@ -7,9 +7,7 @@ import ru.geekbrains.library.entity.Reader;
 import ru.geekbrains.library.model.IssuedBooksRequest;
 import ru.geekbrains.library.service.BooksService;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @RestController
 public class LibraryController {
@@ -46,8 +44,8 @@ public class LibraryController {
     }
 
     @DeleteMapping("/issuedBooks/return")
-    public void returnBooks(@RequestBody IssuedBooksRequest request){
-        booksService.deleteIssuedBooks(request.getBookID(),request.getReaderId());
+    public void returnBooks(@RequestBody IssuedBooksRequest request) {
+        booksService.deleteIssuedBooks(request.getBookID(), request.getReaderId());
     }
 
 
